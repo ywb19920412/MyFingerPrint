@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        //获取系统属性，当前设备是否为屏下指纹：true：是；false：不是
+        if (SystemPropertiesUtil.getBooleanPropert(this, "ro.hardware.fp.fod",false)) {
+            //当前设备为屏下指纹
+
+        }
     }
     /**
      *  @describe: 获取指纹信息
