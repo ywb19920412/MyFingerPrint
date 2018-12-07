@@ -10,4 +10,8 @@
         android:layout_height="50dp"
         android:text="开启指纹验证开关"
         android:gravity="center"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 </LinearLayout>
